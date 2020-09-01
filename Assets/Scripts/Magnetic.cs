@@ -3,14 +3,27 @@ using UnityEngine;
 
 public class Magnetic : MonoBehaviour
 {
+    [SerializeField] private Transform _blockParent;
     private bool _isMagnetic = true;
     private float _coolDownTime = 0.5f;
     private GameObject _pickedUpBlock = null;
+<<<<<<< Updated upstream
     [SerializeField] private Transform _blockParent;
+=======
+<<<<<<< Updated upstream
+=======
+    private InputManager _inputManager;
+
+    private void Start()
+    {
+        _inputManager = FindObjectOfType<InputManager>();
+    }
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && _pickedUpBlock != null)
+        if (Input.GetKeyDown(_inputManager.DropButton) && _pickedUpBlock != null)
         {
             DropBlock();
         }
