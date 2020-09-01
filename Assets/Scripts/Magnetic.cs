@@ -4,7 +4,7 @@ using UnityEngine;
 public class Magnetic : MonoBehaviour
 {
     private bool _isMagnetic = true;
-    private float _coolDownTime = 5f;
+    private float _coolDownTime = 0.5f;
     private GameObject _pickedUpBlock = null;
 
     void Update()
