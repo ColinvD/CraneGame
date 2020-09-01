@@ -6,6 +6,7 @@ public class Magnetic : MonoBehaviour
     private bool _isMagnetic = true;
     private float _coolDownTime = 0.5f;
     private GameObject _pickedUpBlock = null;
+    [SerializeField] private Transform _blockParent;
 
     void Update()
     {
@@ -19,7 +20,7 @@ public class Magnetic : MonoBehaviour
     {
         _isMagnetic = false;
         _pickedUpBlock.GetComponent<Rigidbody>().isKinematic = false;
-        _pickedUpBlock.transform.parent = null;
+        _pickedUpBlock.transform.parent = _blockParent;
         _pickedUpBlock = null;
         StartCoroutine(Cooldown());
     }

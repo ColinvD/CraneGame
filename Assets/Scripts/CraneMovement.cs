@@ -28,32 +28,26 @@ public class CraneMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             direction += Vector3.forward;
-            //transform.position += Vector3.forward * _craneSpeed;
         }
         if (Input.GetKey(KeyCode.D))
         {
             direction += Vector3.right;
-            //transform.position += Vector3.right * _craneSpeed;
         }
         if (Input.GetKey(KeyCode.S))
         {
             direction += Vector3.back;
-            //transform.position += Vector3.back * _craneSpeed;
         }
         if (Input.GetKey(KeyCode.A))
         {
             direction += Vector3.left;
-            //transform.position += Vector3.left * _craneSpeed;
         }
         if (Input.GetKey(KeyCode.UpArrow))
         {
             direction += Vector3.up;
-            //transform.position += Vector3.up * _craneSpeed;
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
             direction += Vector3.down;
-            //transform.position += Vector3.down * _craneSpeed;
         }
 
         return direction;
